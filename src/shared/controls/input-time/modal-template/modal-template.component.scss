@@ -1,0 +1,31 @@
+@import "styles/colors";
+.input-transparent {
+}
+::ng-deep mat-form-field {
+  .mat-mdc-text-field-wrapper,
+  .mat-mdc-form-field,
+  .mat-mdc-form-field-focus-overlay {
+    background-color: transparent !important;
+  }
+}
+.frecuencia-number {
+  background-color: $color-600;
+  border-radius: 10px;
+}
+.input-time {
+  font-size: 30px;
+  height: 100% !important ;
+  width: 100% !important;
+  background: transparent;
+  border: none;
+  justify-content: center;
+}
+.input-time::placeholder {
+    color: $color-white;
+    opacity: 40%;
+}
+input::-webkit-outer-spin-button,
+
+input{
+  color: $color-white !important;
+}

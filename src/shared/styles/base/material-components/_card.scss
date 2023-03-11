@@ -1,0 +1,77 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+@include mat.core();
+
+@mixin color($theme) {
+  // Get the color config from the theme.
+  $color-config: mat.get-color-config($theme);
+
+  // Get the primary color palette from the color-config.
+  $primary-palette: map.get($color-config, 'primary');
+
+  .my-component {
+    // Read the 500 hue from the primary color palette.
+    color: mat.get-color-from-palette($primary-palette, 500);
+  }
+}
+
+@mixin typography($theme) {
+  // Get the typography config from the theme.
+  $typography-config: mat.get-typography-config($theme);
+
+  .my-carousel {
+    font-family: mat.font-family($typography-config);
+  }
+}
+
+@mixin theme($theme) {
+  $color-config: mat.get-color-config($theme);
+  @if $color-config != null {
+    @include color($theme);
+  }
+
+  $typography-config: mat.get-typography-config($theme);
+  @if $typography-config != null {
+    @include typography($theme);
+  }
+}
+$my-color: (
+  50: $color-900,
+  100: $color-700,
+  200: $color-500,
+  300: $color-300,
+  400: $color-100,
+  500: $color-50,
+  600: $color-50,
+  700: $color-50,
+  800: $color-50,
+  900: $color-50,
+  contrast: (
+    50: $color-white,
+    100: $color-white,
+    200: $color-white,
+    300: $color-white,
+    400: $color-white,
+    500: rgba($base, 0.87),
+    600: rgba($base, 0.87),
+    700: rgba($base, 0.87),
+    800: rgba($base, 0.87),
+    900: rgba($base, 0.87),
+  ),
+);
+$my-palette: mat.define-palette($my-color);
+
+$my-themes: mat.define-dark-theme((
+ color: (
+   primary: $my-palette,
+   accent: $my-palette,
+ ),
+ typography: mat.define-typography-config(
+    $font-family: serif,
+  )
+));
+.custom-card{
+  @include mat.card-theme($my-themes);
+}
+
+

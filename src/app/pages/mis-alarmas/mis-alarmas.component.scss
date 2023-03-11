@@ -1,0 +1,21 @@
+.menu-icon { 
+  text-align: center;
+  .menu-label{
+    opacity: 80%;
+  }
+}
+::ng-deep mat-form-field {
+
+  .mat-mdc-form-field-infix{
+    height: 40px !important;
+    min-height: 30 !important;
+  }
+}
+.INICIO,.SUGERIDAS{
+  &.sugeridas-web{
+    padding-bottom: 200px !important;
+  }
+  &.voice-web{
+    padding-bottom: 200px !important;
+  }
+}

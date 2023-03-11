@@ -1,0 +1,83 @@
+{
+  "iconImageFiles": [
+    {
+      "iconName": "add",
+      "iconPath": "assets/icons/add_24px.svg"
+    },
+    {
+      "iconName": "check",
+      "iconPath": "assets/icons/check.svg"
+    },
+    {
+      "iconName": "thunder",
+      "iconPath": "assets/icons/Rayo.svg"
+    },
+    {
+      "iconName": "clock",
+      "iconPath": "assets/icons/Clock.svg"
+    },
+    {
+      "iconName": "close",
+      "iconPath": "assets/icons/close.svg"
+    },
+    {
+      "iconName": "voice",
+      "iconPath": "assets/icons/micro.svg"
+    },
+    {
+      "iconName": "celphone",
+      "iconPath": "assets/icons/Celphone.svg"
+    },
+    {
+      "iconName": "celphone-list",
+      "iconPath": "assets/icons/celphone_list.svg"
+    },
+    {
+      "iconName": "power-list",
+      "iconPath": "assets/icons/power_list.svg"
+    },
+    {
+      "iconName": "bombillo-list",
+      "iconPath": "assets/icons/bombillo_list.svg"
+    },
+    {
+      "iconName": "rayo-principal",
+      "iconPath": "assets/icons/rayo_principal.svg"
+    },
+    {
+      "iconName": "voice-principal",
+      "iconPath": "assets/icons/voice_principal.svg"
+    },
+    {
+      "iconName": "power-principal",
+      "iconPath": "assets/icons/power_principal.svg"
+    },
+    {
+      "iconName": "tecla-forms",
+      "iconPath": "assets/icons/teclas_form.svg"
+    },
+    {
+      "iconName": "celphone-form",
+      "iconPath": "assets/icons/celphone_form.svg"
+    },
+    {
+      "iconName": "clock-web",
+      "iconPath": "assets/icons/clock_web.svg"
+    },
+    {
+      "iconName": "sugeridas-web",
+      "iconPath": "assets/icons/sugeridas_web.svg"
+    },
+    {
+      "iconName": "voice-web",
+      "iconPath": "assets/icons/voice_web.svg"
+    },
+    {
+      "iconName": "brainExercice-form",
+      "iconPath": "assets/icons/brainExercice_form.svg"
+    }
+  ],
+  "customIcons": [
+ 
+  ]
+}

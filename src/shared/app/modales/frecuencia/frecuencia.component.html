@@ -1,0 +1,20 @@
+<mat-card color="accent" class="p-0 background-800" style="padding: 20px !important;" >
+  <mat-card-content class="p-2" color="accent">
+    <p class="h3 m-0 py-2">Ingresar frecuencia</p>
+    <div class="d-flex align-items-center mr-3">
+     <div class="px-4">
+      <div class="frecuencia-number" style="height: 72px; width: 96px">
+        <mat-form-field class="input-transparent" color="primary" class="example-full-width">
+          <input matInput placeholder="Ej:5" [(ngModel)]="controls['frecuenciaNumero'].value" class="text-center " type="number" style="font-size: 30px;"/>
+        </mat-form-field>
+      </div>
+     </div>
+      <app-input-radio 
+        [control]="controls['frecuenciaTiempo']"
+      ></app-input-radio>
+    </div>
+    <div class="d-flex justify-content-center p-3 w-100">
+      <button mat-flat-button color="accenr" class="color-white" (click)="emitClick($event)"  >Confirmar</button>
+    </div>
+  </mat-card-content>
+</mat-card>

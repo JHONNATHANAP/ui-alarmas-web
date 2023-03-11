@@ -1,0 +1,90 @@
+<div class="layout">
+  <!-- <div class="header">
+   
+
+  </div> -->
+  <div style="position: absolute" class="w-100 p-2 pt-3">
+    <app-ripple [radio]="15" routerLink="/mis-alarmas">
+      <div
+        class="d-flex justify-content-center align-items-center"
+        style="
+          width: 32px;
+          height: 32px;
+          border: 1px solid #6485ab;
+          border-radius: 50%;
+          float: right;
+          opacity: 80%;
+        "
+      >
+        <svg-icon name="close"></svg-icon>
+      </div>
+    </app-ripple>
+  </div>
+  <div class="content">
+    <div class="content d-flex flex-column justify-content-center pt-3">
+      <div class="w-100 d-flex flex-column align-items-center">
+        <h1 class="mb-0">Alarma rápida</h1>
+      </div>
+    </div>
+    <div style="opacity: 60%" class="mb-2 d-flex justify-content-center p-2">
+      <svg
+        width="150"
+        height="150"
+        viewBox="0 0 36 36"
+        fill="#C1D1EF"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M16.6429 21.875L12 32L23.7619 17.6562L19.4286 18.5L25 10.0625L20.9762 10.625L25 5H16.6429L12 15.9688L16.6429 14.2812L12 23.5625L16.6429 21.875Z"
+          stroke="#C1D1EF"
+        />
+      </svg>
+    </div>
+    <div class="px-2" style="border-radius: 30px">
+      <app-card style="border-radius: 20px !important">
+        <div class="p-3 pb-0">
+          <div class="w-100 d-flex flex-column align-items-center">
+            <h3 class="m-0 mb-1 text-center">Tu alarma sonará dentro de:</h3>
+            <h1 style="opacity: 80%" class="m-0 mt-0">01 : 30</h1>
+            <p style="opacity: 80%" class="m-0 h5">Horas : Minutos</p>
+            <div class="w-75 row">
+              <div
+                *ngFor="let tecla of teclado"
+                class="col-4 d-flex justify-content-center"
+              >
+                <app-ripple [radio]="28" style="border-radius: 50%">
+                  <div class="py-2">
+                    <div
+                      class="d-flex justify-content-center align-items-center color-white background-600 h1 m-0"
+                      style="height: 64px; width: 64px; border-radius: 50%"
+                    >
+                      {{ tecla }}
+                    </div>
+                  </div>
+                </app-ripple>
+              </div>
+            </div>
+          </div>
+        </div>
+      </app-card>
+    </div>
+    <div class="p-2 py-4">
+      <app-button class="w-100" [type]="'submit'" (click)="navigate()"
+        ><strong>Guardar</strong></app-button
+      >
+    </div>
+  </div>
+  <div class="fotter p-2 py-4"></div>
+</div>
+
+<!-- 
+  <div class="p-2">
+  <app-input></app-input>
+</div>
+  <svg-icon name="add"></svg-icon>
+<svg-icon name="close"></svg-icon> 
+    <div class="background-50 color-600">sdsdsd</div>
+<div class="p-2">
+  <app-button [type]="'submit'"><strong>Guardar</strong></app-button>
+</div>
+-->

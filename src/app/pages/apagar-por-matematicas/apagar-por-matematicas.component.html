@@ -1,0 +1,25 @@
+<div class="layout">
+  <div class="content">
+    <div class="content d-flex flex-column justify-content-center pt-3">
+      <div class="w-100 d-flex flex-column align-items-center">
+        <h1 class="mb-0 color-white text-center">
+          Alarma de <br />
+          trabajo
+        </h1>
+      </div>
+    </div>
+    <div
+      class="mb-2 d-flex flex-column align-items-center p-2"
+      style="margin-top: 25%"
+    >
+      <p class="h2 m-0 d-flex color-white">06:00 am</p>
+      <p class="h2 d-flex" style="text-align: center">
+        Resuelve la ecuación para <br />
+        desactivar la alarma
+      </p>
+      <p class="h1 m-0 mb-2 d-flex color-white">8 * 7</p>
+      <app-input (keyup.enter)= "onClickSubmit()" (change)="onClickSubmit()" class="mt-2" [control]="control"></app-input>
+    </div>
+    <div class="fotter p-2 py-4"></div>
+  </div>
+</div>

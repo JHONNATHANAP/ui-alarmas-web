@@ -1,0 +1,126 @@
+@use '@angular/material' as mat;
+
+// GAMA COLORES
+$my-primary-color: (
+  50: $color-50,
+  100: $color-100,
+  200: $color-200,
+  300: $color-300,
+  400: $color-400,
+  500: $color-500,
+  600: $color-600,
+  700: $color-700,
+  800: $color-800,
+  900: $color-900,
+  contrast: (
+    50: rgba($color-black, 0.87),
+    100: rgba($color-black, 0.87),
+    200: rgba($color-black, 0.87),
+    300: rgba($color-black, 0.87),
+    400: $color-white,
+    500: $color-white,
+    600: $color-white,
+    700: $color-white,
+    800: $color-white,
+    900: $color-white,
+  ),
+);
+
+$my-accent-color: (
+  50: $color-900,
+  100: $color-700,
+  200: $color-500,
+  300: $color-300,
+  400: $color-100,
+  500: $color-50,
+  600: $color-50,
+  700: $color-50,
+  800: $color-50,
+  900: $color-50,
+  contrast: (
+    50: $color-white,
+    100: $color-white,
+    200: $color-white,
+    300: $color-white,
+    400: $color-white,
+    500: rgba($base, 0.87),
+    600: rgba($base, 0.87),
+    700: rgba($base, 0.87),
+    800: rgba($base, 0.87),
+    900: rgba($base, 0.87),
+  ),
+);
+
+$my-warn-color: (
+  50: #c1d1ef,
+  100: #9ebad9,
+  200: #839fc1,
+  300: #6485ab,
+  400: #4f739c,
+  500: #35608a,
+  600: #255279,
+  700: #123f62,
+  800: #002d4c,
+  900: #001a34,
+  contrast: (
+    50: rgba(black, 0.87),
+    100: rgba(black, 0.87),
+    200: rgba(black, 0.87),
+    300: rgba(black, 0.87),
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+  ),
+);
+// PALETA DE COLORES
+$my-palette-primary: mat.define-palette($my-primary-color);
+$my-palette-accent: mat.define-palette($my-accent-color);
+$my-palette-warn: mat.define-palette($my-warn-color);
+
+
+
+$my-custom-level: mat.define-typography-level(
+  $font-family: 'Josefin Sans',
+  $font-weight: 400,
+  $font-size: 10px,
+  $line-height: 1,
+  $letter-spacing: normal,
+);
+
+$custom-typography: mat.define-typography-config(
+  $font-family: 'Josefin Sans',
+  $headline-1:$my-custom-level,
+  $headline-2:$my-custom-level,
+  $headline-3:$my-custom-level,
+  $headline-4:$my-custom-level,
+  $headline-5:$my-custom-level,
+  $headline-6:$my-custom-level,
+  $subtitle-1:$my-custom-level,
+  $subtitle-2:$my-custom-level,
+  $body-1:$my-custom-level,
+  $body-2:$my-custom-level,
+  $caption:$my-custom-level,
+  $button:$my-custom-level,
+  
+);
+// TEMA PROPIO
+$my-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $my-palette-primary,
+      accent: $my-palette-accent,
+      warn: $my-palette-warn,
+    ),
+    typography: $custom-typography
+ 
+  )
+);
+
+// APLICAR NUESTRO TEMA A ANGULAR
+@include mat.all-component-themes($my-theme);
+
+
+

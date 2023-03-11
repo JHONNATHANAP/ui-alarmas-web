@@ -1,0 +1,25 @@
+
+  
+
+    <div
+      class="mb-2 d-flex flex-column align-items-center p-2"
+ 
+    >
+      <p class="h3 d-flex" style="text-align: center">
+        Mantén oprimido el botón <br />
+        habla fuerte y claro
+      </p>
+      <app-ripple [radio]="60" (click)="navigate()">
+        <div
+          style="width: 160px; height: 160px; border-radius: 50%"
+          class="background-600 d-flex justify-content-center align-items-center"
+        >
+          <svg-icon name="voice-principal"></svg-icon>
+        </div>
+      </app-ripple>
+      <p class="h4 d-flex" style="text-align: center; opacity: 80%">
+        Ejemplo: <br />
+        Alarma de lunes a viernes <br />a las 7am.
+      </p>
+    </div>
+    <div class="fotter p-2 py-4"></div>

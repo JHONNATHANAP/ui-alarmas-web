@@ -1,0 +1,24 @@
+<div *ngFor="let alarma of alarmas" class="mb-2"  >
+  <app-ripple   [radio]="100" >
+    <app-card >
+      <div class="d-flex justify-content-between">
+        <div class="row" (click)="navigate()" >
+          <span class="pb-3 h4 m-0">{{alarma.titulo}}</span>
+          <span class="h2 m-0 d-flex align-items-center ">{{alarma.hora}}</span>
+        </div>
+        <div class="d-flex justify-content-end row">
+          <app-dias-semana [dias]="alarma.diasDelaSemana" style="width: fit-content;" class="pb-3"></app-dias-semana>
+          <div style="width: fit-content;" class="py-2" >
+        
+            <svg-icon  [name]="alarma.tipoApagado?.tipo==='TECLA'?'power-list':alarma.tipoApagado?.tipo==='MOVIMIENTO'?'celphone-list':'bombillo-list'" ></svg-icon>
+       
+            <app-slide *ngIf="alarma?.showSlider!==false" [checked]="alarma.active" style="width: fit-content;margin-left: 30px;"></app-slide>
+            
+         
+          </div>
+        </div>
+      </div>
+    </app-card>
+  </app-ripple>
+  
+</div>

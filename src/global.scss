@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.layout {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@import "styles";
+.custom-snack {
+  background-color: $color-600;
+  .mdc-snackbar__surface {
+    background-color: $color-600 !important;
+    padding: 40px;
+    color: $color-50 !important;
+
+    text-align: center;
+    border-radius: 20px;
+  }
+  .mat-mdc-snack-bar-label {
+    color: $color-50 !important;
+    font-size: 20px !important;
+  }
+}
+.cdk-overlay-pane{
+  width: fit-content !important;
+
+}
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+::ng-deep mat-card{
+  padding: 10px !important;
+}

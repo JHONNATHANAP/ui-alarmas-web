@@ -1,0 +1,117 @@
+<div class="layout">
+  <div class="content h-100">
+    <div class="row h-100">
+      <div class="col-md-4 col-sm-12" style="padding:80px;  padding-top: 60px;">
+        <div class="w-100 p-2" *ngIf="appService.view === 'SUGERIDAS'">
+          <app-ripple [radio]="15" (click)="changeView('INICIO')">
+            <div
+              class="d-flex justify-content-center align-items-center"
+              style="
+                width: 32px;
+                height: 32px;
+                border: 1px solid #6485ab;
+                border-radius: 50%;
+                float: right;
+                opacity: 80%;
+              "
+            >
+              <svg-icon name="close"></svg-icon>
+            </div>
+          </app-ripple>
+        </div>
+        <div class="d-flex flex-column justify-content-center">
+          <div class="w-100 d-flex flex-column align-items-center pt-2">
+            <ng-container [ngSwitch]="appService.view">
+              <ng-template ngSwitchCase="SUGERIDAS">
+                <h1>Alarmas sugeridas</h1>
+                <h4
+                  class="mt-0 w-50 text-center"
+                  style="opacity: 60% !important"
+                >
+                  Hemos preparado alarmas<br />
+                  según tus necesidades
+                </h4>
+              </ng-template>
+              <ng-template ngSwitchDefault>
+                <h1>Mis Alarmas</h1>
+                <h4
+                  class="mt-0 w-50 text-center"
+                  style="opacity: 60% !important"
+                >
+                  Próxima alarma <br />
+                  06:00 am
+                </h4>
+              </ng-template>
+            </ng-container>
+          </div>
+        </div>
+        <div class="list p-2">
+          <ng-container [ngSwitch]="appService.view">
+            <ng-template ngSwitchCase="SUGERIDAS">
+              <app-lista-alarmas
+                [alarmas]="appService.alarmasSugeridas"
+              ></app-lista-alarmas>
+            </ng-template>
+            <ng-template ngSwitchDefault>
+              <app-lista-alarmas
+                [alarmas]="appService.misAlarmas"
+              ></app-lista-alarmas>
+            </ng-template>
+          </ng-container>
+        </div>
+      </div>
+      <div
+        class="col-sm-12 col-md-8 h-100 d-flex align-items-center justify-content-evenly flex-column" style="padding-right: 30px;padding-bottom:10px"
+      >
+        <div
+          class="d-flex align-items-center justify-content-around w-100 py-4"
+          style="padding: 60px 0px !important;padding-bottom:30px !important"
+        >
+          <div
+            *ngFor="let option of menu"
+            class="p-0 col-3 menu-icon {{ appService.view }} {{ option.icono }}"
+            (click)="changeView(option.view)"
+          >
+            <app-ripple [radio]="200" class="d-flex">
+              <div
+                class="d-flex"
+                [ngClass]="{
+                  'flex-column': ['INICIO', 'SUGERIDAS'].includes(
+                    appService.view
+                  )
+                }"
+              >
+                <svg-icon name="{{ option.icono }}" class=""></svg-icon>
+                <span
+                  class="h2 m-0 p-3 text-center menu-label"
+                  [innerHTML]="option.label"
+                ></span>
+              </div>
+            </app-ripple>
+          </div>
+        </div>
+        <div
+          style="overflow-y: scroll; border-radius: 12px"
+          *ngIf="appService.view !== 'INICIO'"
+          class="background-700 scroll--simple sub-content w-100 "
+        >
+          <ng-container [ngSwitch]="appService.view">
+            <ng-template ngSwitchCase="NUEVA_ALARMA">
+              <div style="padding: 10px 10%" class="w-100">
+                <app-form-alarma></app-form-alarma>
+              </div>
+            </ng-template>
+            <ng-template ngSwitchCase="CONFIRMAR_ALARMA">
+              <div style="padding: 10px 10%" class="w-100">
+                <app-form-alarma></app-form-alarma>
+              </div>
+            </ng-template>
+            <ng-template ngSwitchCase="ALARMA_POR_VOZ">
+              <app-alarma-por-voz></app-alarma-por-voz>
+            </ng-template>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

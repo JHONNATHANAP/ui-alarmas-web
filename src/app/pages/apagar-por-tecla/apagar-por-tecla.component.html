@@ -1,0 +1,32 @@
+<div class="layout">
+  <div class="content">
+    <div class="content d-flex flex-column justify-content-center pt-3">
+      <div class="w-100 d-flex flex-column align-items-center">
+        <h1 class="mb-0 color-white text-center">
+          Alarma de <br />
+          trabajo
+        </h1>
+      </div>
+    </div>
+    <div
+      class="mb-2 d-flex flex-column align-items-center p-2"
+      style="margin-top: 25%"
+    >
+      <p class="h2 m-0 d-flex color-white"  > 06:00 am </p>
+      <p class="h2 d-flex" style="text-align: center">
+        Oprime el botón en pantalla <br />
+        para desactivar la alarma
+      </p>
+      <app-ripple [radio]="60" routerLink="/mis-alarmas">
+        <div
+          style="width: 160px; height: 160px; border-radius: 50%"
+          class="background-700 d-flex justify-content-center align-items-center"
+        >
+          <svg-icon name="power-principal"></svg-icon>
+        </div>
+      </app-ripple>
+     
+    </div>
+    <div class="fotter p-2 py-4"></div>
+  </div>
+</div>

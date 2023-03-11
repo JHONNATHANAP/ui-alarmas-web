@@ -1,0 +1,20 @@
+<div >
+  <mat-form-field
+  [floatLabel]="'always'"
+  class="app-custom-input"
+  [color]="'accent'"
+  appearance="outline"
+>
+  <mat-label>{{ control.label }}</mat-label>
+  <input
+    readonly
+    (changed)="controlChange($event)"
+    [value]="control?.valueText ? control.valueText : ''"
+    matInput
+    type="text"
+    appInputTimeModal
+    [placeholder]="control.placeholder || ''"
+  />
+</mat-form-field>
+
+</div>

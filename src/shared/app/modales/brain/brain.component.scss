@@ -1,0 +1,15 @@
+@import "styles/colors";
+.input-transparent {
+}
+::ng-deep mat-form-field {
+  .mat-mdc-text-field-wrapper, .mat-mdc-form-field, .mat-mdc-form-field-focus-overlay {
+    background-color: transparent !important;
+  }
+  .mat-mdc-form-field-infix{
+    height: 40px !important;
+  }
+}
+.frecuencia-number{
+    background-color: $color-600;
+    border-radius: 10px;
+}

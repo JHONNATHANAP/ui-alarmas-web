@@ -1,0 +1,111 @@
+$color-white: white;
+$color-50: #c1d1ef;
+$color-100: #9ebad9;
+$color-200: #839fc1;
+$color-300: #6485ab;
+$color-400: #4f739c;
+$color-500: #35608a;
+$color-600: #255279;
+$color-700: #123f62;
+$color-800: #002d4c;
+$color-900: #001a34;
+$color-black: black;
+
+$base: $color-800;
+$base-dark: #e0e0e0;
+$base-light: #ffffff;
+$on-base: $color-white;
+
+$primary: $color-500;
+$primary-dark: $color-900;
+$primary-light: $color-100;
+$on-primary: #ffffff;
+
+$secondary: #f44336;
+$secondary-dark: #b90007;
+$secondary-light: #ff795d;
+$on-secondary: #ffffff;
+
+$error: #b00020;
+$error-dark: #91041e;
+$error-light: #cc062a;
+$on-error: #ffffff;
+
+$success: #99aa00;
+$success-dark: #7f8d00;
+$success-light: #b8cc07;
+$on-success: #ffffff;
+/* 
+var background=''
+var color=''
+for (let step = 50; step < 1000; step+=step<100?50:100) {
+  // Se ejecuta 5 veces, con valores del paso 0 al 4.
+  console.log(step);
+    background+=`.background-${step}{background-color: $color-${step};}`
+    color+=`.color-${step}{color: $color-${step};}`
+    
+}
+*/
+.background-50 {
+  background-color: $color-50;
+}
+.background-100 {
+  background-color: $color-100;
+}
+.background-200 {
+  background-color: $color-200;
+}
+.background-300 {
+  background-color: $color-300;
+}
+.background-400 {
+  background-color: $color-400;
+}
+.background-500 {
+  background-color: $color-500;
+}
+.background-600 {
+  background-color: $color-600;
+}
+.background-700 {
+  background-color: $color-700;
+}
+.background-800 {
+  background-color: $color-800;
+}
+.background-900 {
+  background-color: $color-900;
+}
+.color-50 {
+  color: $color-50;
+}
+.color-100 {
+  color: $color-100;
+}
+.color-200 {
+  color: $color-200;
+}
+.color-300 {
+  color: $color-300;
+}
+.color-400 {
+  color: $color-400;
+}
+.color-500 {
+  color: $color-500;
+}
+.color-600 {
+  color: $color-600;
+}
+.color-700 {
+  color: $color-700;
+}
+.color-800 {
+  color: $color-800;
+}
+.color-900 {
+  color: $color-900;
+}
+.color-white{
+  color: $color-white;
+}

@@ -1,0 +1,48 @@
+<div class="layout">
+  <!-- <div class="header">
+   
+
+  </div> -->
+  <div class="content">
+    <div class="content d-flex flex-column justify-content-center pt-3">
+      <div class="w-100 d-flex flex-column align-items-center">
+        <h1>Elegir flujo para empezar</h1>
+        <h4 class="mt-0 w-50 text-center">Próxima alarma 06:00 am</h4>
+      </div>
+    </div>
+
+    <div class="list p-2 d-flex flex-column align-items-center">
+      <div class="p-2">
+        <app-button [type]="'submit'" routerLink="/mis-alarmas"
+          ><strong>Mis Alarmas</strong></app-button
+        >
+      </div>
+      <div class="p-2">
+        <app-button [type]="'submit'" routerLink="/apagar-tecla"
+          ><strong>Apagar por tecla</strong></app-button
+        >
+      </div>
+      <div class="p-2">
+        <app-button [type]="'submit'" routerLink="/apagar-mate"
+          ><strong>Apagar por matemáticas</strong></app-button
+        >
+      </div>
+      <div class="p-2">
+        <app-button [type]="'submit'" routerLink="/apagar-frase"
+          ><strong>Apagar por frase</strong></app-button
+        >
+      </div>
+      <div class="h3 text-center p-2">
+        Esta pantalla no hace parte de los entregables. Sin embargo es necesario
+        dejarla al iniciar la aplicación debido a que las opciones de apagado de
+        alarma no hay como activarlas en el flujo principal de la aplicación
+        (Mis alarmas) .
+      </div>
+      <div class="h3 text-center p-2">
+        En la parte super izquierda de la pantalla va a existir constantemente
+        un botón que dice "Volver a Inicio" en color negro, lo cual le permitira
+        regresar a esta pantalla en cualquier momento.
+      </div>
+    </div>
+  </div>
+</div>

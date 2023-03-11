@@ -1,0 +1,7 @@
+<!-- <button class="app-button" [type]="type">
+  <ng-content></ng-content>
+</button> -->
+
+<button  (click)="emitClick($event)" class="app-button {{class}} " mat-flat-button color="accent" [type]="type">
+  <ng-content></ng-content>
+</button>

@@ -1,0 +1,12 @@
+<mat-card color="accent" class="p-0 background-800" style="    min-width: 300px !important;" >
+  <mat-card-content class="p-2 " color="accent">
+    <p class="h5 m-0 py-2" >Seleccionar fecha</p>
+    <mat-calendar [(selected)]="selected" (changes)="change($event)">  
+    </mat-calendar>
+    <div style="float:right">
+      <button mat-flat-button color="accenr" >Cancelar</button>
+      <button mat-flat-button color="accenr"(click)="emitClick($event)"  >OK</button>
+    </div>
+
+  </mat-card-content>
+</mat-card>

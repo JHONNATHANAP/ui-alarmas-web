@@ -1,0 +1,113 @@
+<!-- <div class=" d-flex flex-column justify-content-center pt-3">
+  <div class="w-100 d-flex flex-column align-items-center">
+    <h1 class="mb-0">{{ edit ? "Confirmar alarma" : "Nueva Alarma" }}</h1>
+    <h4 *ngIf="edit" class="mt-2 text-center">
+      Estos son los datos de la alarma que elegiste
+    </h4>
+  </div>
+</div> -->
+<div class="pt-4 w-100 px-3" style="font-size: 12px !">
+  <form
+    [formGroup]="form"
+    class="w-100 fl-al-item-center fl-col"
+    #genericForm="ngForm"
+    (ngSubmit)="submitForm()"
+    novalidate
+    autocomplete="off"
+  >
+    <div class="row">
+      <ng-container
+        *ngFor="let key of formKeys"
+        [ngSwitch]="controls[key].type"
+      >
+        <div
+          class="col-{{
+            controls[key].colums ? controls[key].colums : 12
+          }} px-1"
+        >
+          <ng-template ngSwitchCase="string">
+            <app-input [control]="controls[key]"></app-input>
+          </ng-template>
+          <ng-template ngSwitchCase="modal">
+            <app-input-modal [control]="controls[key]"></app-input-modal>
+          </ng-template>
+          <ng-template ngSwitchCase="date">
+            <app-input-date [control]="controls[key]"></app-input-date>
+          </ng-template>
+          <ng-template ngSwitchCase="dias">
+            <app-input-dias-semana
+              [control]="controls[key]"
+            ></app-input-dias-semana>
+          </ng-template>
+          <ng-template ngSwitchCase="slider">
+            <app-input-slide
+              style="height: 50px; display: block"
+              [control]="controls[key]"
+            ></app-input-slide>
+          </ng-template>
+          <ng-template ngSwitchCase="time">
+            <app-input-time [control]="controls[key]"></app-input-time>
+          </ng-template>
+        </div>
+      </ng-container>
+      <div class="d-flex align-items-center flex-column w-100 p-0">
+        <p class="h3">Tipo de apagado</p>
+        <div class="d-flex">
+          <app-ripple
+            [radio]="50"
+            class="px-2"
+            appInputModal
+            [component]="templateTecla"
+            (changed)="tipoApagadoChange($event, 'TECLA')"
+          >
+            <div
+              class="d-flex flex-column align-items-center"
+              style="width: fit-content"
+            >
+              <svg-icon name="tecla-forms"></svg-icon>
+              <span class="h4 m-0 px-2">Tecla</span>
+            </div>
+          </app-ripple>
+          <app-ripple
+            [radio]="50"
+            class="px-2"
+            appInputModal
+            [component]="templateMovimiento"
+            (changed)="tipoApagadoChange($event, 'MOVIMIENTO')"
+          >
+            <div
+              class="d-flex flex-column align-items-center"
+              style="width: fit-content"
+            >
+              <svg-icon name="celphone-form"></svg-icon>
+              <span class="h4 m-0 px-2">Movimiento</span>
+            </div>
+          </app-ripple>
+          <app-ripple
+            [radio]="50"
+            class="px-2"
+            appInputModal
+            [component]="templateBrain"
+            (changed)="tipoApagadoChange($event, 'BRAIN')"
+          >
+            <div
+              class="d-flex flex-column align-items-center"
+              style="width: fit-content"
+            >
+              <svg-icon name="brainExercice-form"></svg-icon>
+              <span class="h4 m-0 px-2 text-center"
+                >EJercicio <br />mental</span
+              >
+            </div>
+          </app-ripple>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="p-2 py-4 d-flex justify-content-center">
+  <app-button class="d-flex w-60 justify-content-center" [type]="'submit'" (onClick)="submitForm()"
+    ><strong>Guardar</strong></app-button
+  >
+</div>

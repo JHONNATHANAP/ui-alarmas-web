@@ -1,0 +1,7 @@
+<div class="d-flex">
+  <div *ngFor="let dia of dias">
+    <app-ripple [radio]="5" class="w-100 h5">
+      <div class="dia" [ngClass]="{'active':dia.active}" (click)="toogle(dia)" >{{ dia.label }}</div>
+    </app-ripple>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="layout"> 
+  <div style="position: absolute" class="w-100 p-2 pt-3">
+    <app-ripple [radio]="15" routerLink="/mis-alarmas">
+      <div
+        class="d-flex justify-content-center align-items-center"
+        style="
+          width: 32px;
+          height: 32px;
+          border: 1px solid #6485ab;
+          border-radius: 50%;
+          float: right;
+          opacity: 80%;
+        "
+      >
+        <svg-icon name="close"></svg-icon>
+      </div>
+    </app-ripple>
+  </div>
+  <div class="content">
+    <div class="content d-flex flex-column justify-content-center pt-3">
+      <div class="w-100 d-flex flex-column align-items-center">
+        <h1>Alarmas sugeridas</h1>
+        <h4 class="mt-0 w-50 text-center">Hemos preparado alarmas <br>según tus necesidades</h4>
+      </div>
+    </div>
+    <div class="list p-2">
+      <app-lista-alarmas [alarmas]="alarmas" ></app-lista-alarmas>
+    </div>
+  </div>  
+</div>
+
+

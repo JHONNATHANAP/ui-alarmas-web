@@ -1,0 +1,65 @@
+<mat-card color="accent" class="p-0 background-800">
+  <mat-card-content class="p-2" color="accent">
+    <p class="h3 m-0 py-2">Ingresar hora</p>
+    <div class="d-flex align-items-center justify-content-center">
+      <div class="w-100">
+   
+        <form  [formGroup]="form" class="p-5">
+          <div class="d-flex align-items-center p-3">
+            <div class="frecuencia-number" style="height: 72px; width: 96px">
+              <input
+                minLength="2"
+                size="2"
+                max="24"
+                min="0"
+                formControlName="hora"
+                placeholder="Ej:5"
+                class="text-center input-time"
+                type="number"
+                (input)="_handleInput(form.controls['hora'],minutos)"
+              />
+            </div>
+            <span class="px-2 h2" >:</span>
+            <div class="frecuencia-number" style="height: 72px; width: 96px">
+              <input
+                maxLength="2"
+                size="2"
+                max="24"
+                min="0"
+                formControlName="minutos"
+                placeholder="Ej:25"
+                class="text-center input-time"
+                type="number"
+                #minutos
+              />
+            </div>
+            <span class="px-1" ></span>
+            <div class="background-600 text-center d-flex row justify-content-around" style="border-radius: 5px;width:47px;    height: 50px;margin-left: 10px;">
+              <div  (click)="changeMeriano('AM')" [ngClass]="{'background-700':meridiano==='AM'}"  class="d-flex justify-content-center text-center align-items-center" style="border-bottom:1px solid white">
+                AM
+              </div>
+              <div (click)="changeMeriano('PM')"[ngClass]="{'background-700':meridiano==='PM'}"  class="d-flex justify-content-center text-center align-items-center">
+              PM
+              </div>
+            </div>
+          </div>
+          
+        </form>
+          
+
+          <input matInput hidden />
+  
+      </div>
+    </div>
+    <div class="d-flex justify-content-center p-3 w-100">
+      <button
+        mat-flat-button
+        color="accenr"
+        class="color-white"
+        (click)="emitClick($event)"
+      >
+        Confirmar
+      </button>
+    </div>
+  </mat-card-content>
+</mat-card>

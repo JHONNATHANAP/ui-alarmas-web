@@ -1,0 +1,64 @@
+@import "styles/colors";
+
+::ng-deep .mdc-switch {
+  height: 32px !important;
+  width: 52px !important;
+  .mdc-switch__track {
+    height: 32px !important;
+    width: 52px !important;
+    border-radius: 30px !important;
+    border: 2px solid $color-300;
+  }
+  .mdc-switch__handle {
+    width: 25px !important;
+    height: 25px !important;
+    border-radius: 50% !important;
+    margin-left: 4px !important;
+  }
+  .mdc-switch__handle {
+  }
+  &.mdc-switch--checked {
+    .mdc-switch__handle {
+      margin-left: -10px !important;
+    }
+  }
+
+  .mdc-switch__ripple{
+    background-color: rgba($color-white,12%);
+    border-radius: 50%;
+    height: 40px !important;
+    width: 40px !important;
+    z-index: -1000 !important;
+  }
+  
+  .mdc-switch__icons::before {
+    background: $color-900 !important;
+    background-color: $color-900 !important;
+  }
+  .mdc-switch__icons::after {
+    background: $color-900 !important;
+    background-color: $color-900 !important;
+  }
+  .mdc-switch__icon {
+    fill: white !important;
+  }
+  .mdc-switch__handle::before {
+    background: $color-700 !important;
+    background-color: $color-700 !important;
+  }
+  .mdc-switch__handle::after {
+    background: $color-700 !important;
+    background-color: $color-700 !important;
+  }
+  &.mdc-switch--unselected {
+    .mdc-switch__track {
+      background-color: $color-500 !important;
+    }
+    .mdc-switch__track::before {
+      background: none !important;
+    }
+    .mdc-switch__handle::after {
+      background: none !important;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+@import '@angular/material/theming';
+$custom-typography: mat-typography-config(
+  $font-family: 'Josefin Sans'
+);
+
+@include angular-material-typography($custom-typography);
+
